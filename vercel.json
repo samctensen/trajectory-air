@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://aero.traceaq.com",
+      "permanent": true
+    }
+  ]
+}
