@@ -1,28 +1,23 @@
 # Trajectory Air
 
-### Installation
-Before running, you need to install homebrew, node, npx, and clone the repo
-* Install Homebrew:
-    ```
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    ```
-  * Pay attention during install and run the commands in the terminal it requires after the initial install
-* Install Node:
-    ```
-    brew install node
-    ```
-* Clone Project with SSH:
-    ```
-    git clone git@github.com:samctensen/TrajectoryAir.git
-    ```
-* Install npm dependencies (from within ```/trajectoryair/``` )
-  ```
-  npm install
-  ```
+An interactive web application for exploring air-quality model data on a map.
 
-### Running the Development Server
-Now that everything is installed, the simulator can be ran
-* Enter the ```/trajectoryair/``` project folder
-    ```
-    npm run dev
-    ```
+Built with Next.js, TypeScript, React, Mapbox, and Recharts. This legacy application was retired in June 2025; the existing deployment redirects to [aero.traceaq.com](https://aero.traceaq.com).
+
+## Develop
+
+With Node.js and npm installed:
+
+```sh
+npm ci
+npm run dev
+```
+
+Set `NEXT_PUBLIC_MAPBOX_TOKEN` and `NEXT_PUBLIC_MAPBOX_USERNAME` in `.env.local` for your Mapbox setup. Run `npm run build` for a production build. The redirect in `vercel.json` remains part of the archived deployment configuration.
+
+## Project
+
+- `app/`, `components/` — application pages and interface.
+- `functions/`, `constants/`, `types/` — data handling and shared definitions.
+- `UploadNetCDFs.py` — an earlier upload script.
+- [Trajectory Air Uploader](https://github.com/samctensen/trajectory-air-uploader) — the separate data preparation and upload pipeline.
